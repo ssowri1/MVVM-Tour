@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q4i-4T-zGv">
+                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gbv-UV-6BE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3NZ-Ef-7ka"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aiV-A5-fE1">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="V0h-8u-fRU"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHh-Vq-aGg">
+                                <rect key="frame" x="273" y="698" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="GrH-o8-Cvw"/>
+                                    <constraint firstAttribute="height" constant="80" id="RfZ-w8-W0H"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="gray" image="dot.circle.viewfinder" catalog="system" title="">
+                                    <color key="baseForegroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="configureLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="DdS-Zv-IDQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aiV-A5-fE1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ATM-I6-khq"/>
+                            <constraint firstItem="aiV-A5-fE1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AYk-Lb-kU5"/>
+                            <constraint firstItem="Q4i-4T-zGv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HPh-F1-bVZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bHh-Vq-aGg" secondAttribute="trailing" constant="40" id="HfT-8b-jpD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bHh-Vq-aGg" secondAttribute="bottom" constant="40" id="JWu-xF-5eS"/>
+                            <constraint firstItem="aiV-A5-fE1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b0W-lZ-B2e"/>
+                            <constraint firstItem="Q4i-4T-zGv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lYB-MQ-g1E"/>
+                            <constraint firstItem="Q4i-4T-zGv" firstAttribute="top" secondItem="aiV-A5-fE1" secondAttribute="bottom" id="uUc-L5-gzX"/>
+                            <constraint firstItem="Q4i-4T-zGv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="weg-xV-Jkr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZRP-KN-Sfq">
+                        <barButtonItem key="rightBarButtonItem" id="WWV-c1-gfd">
+                            <connections>
+                                <action selector="showHistry:" destination="BYZ-38-t0r" id="hOK-Cb-Cng"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locateMeButton" destination="bHh-Vq-aGg" id="uLD-L2-JqS"/>
+                        <outlet property="searchBar" destination="aiV-A5-fE1" id="ohg-ma-FWx"/>
+                        <outlet property="weatherTableView" destination="Q4i-4T-zGv" id="rmY-Aa-5c8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.38931297709917" y="3.5211267605633805"/>
+        </scene>
+        <!--Weather Details View Controller-->
+        <scene sceneID="EmJ-XP-VpB">
+            <objects>
+                <viewController storyboardIdentifier="WeatherDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mgF-KQ-7Hh" customClass="WeatherDetailsViewController" customModule="WeatherStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A1i-Hk-0Oe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uyo-uX-g4W">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mgF-KQ-7Hh" id="zB2-ch-Kv9"/>
+                                    <outlet property="delegate" destination="mgF-KQ-7Hh" id="Uwa-Rf-IDt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dL8-I4-kYv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uyo-uX-g4W" secondAttribute="bottom" id="CSB-7C-UC3"/>
+                            <constraint firstItem="uyo-uX-g4W" firstAttribute="leading" secondItem="dL8-I4-kYv" secondAttribute="leading" id="pT6-dL-Xb2"/>
+                            <constraint firstAttribute="trailing" secondItem="uyo-uX-g4W" secondAttribute="trailing" id="qdv-6U-5hc"/>
+                            <constraint firstItem="uyo-uX-g4W" firstAttribute="top" secondItem="dL8-I4-kYv" secondAttribute="top" id="vFO-pH-FYP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailsTableView" destination="uyo-uX-g4W" id="JlZ-Jy-EGg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2x-hr-w2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dot.circle.viewfinder" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

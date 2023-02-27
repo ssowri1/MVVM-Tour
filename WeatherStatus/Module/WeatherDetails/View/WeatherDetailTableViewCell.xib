@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="MOD-RP-qLk" customClass="WeatherDetailTableViewCell" customModule="WeatherStatus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MOD-RP-qLk" id="lzm-oh-liz">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOh-je-fHQ">
+                        <rect key="frame" x="16" y="8" width="288" height="84"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fCA-ap-SiS">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="84"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rdh-FX-5Hd">
+                                        <rect key="frame" x="0.0" y="0.0" width="70.666666666666671" height="84"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hb-tk-ZIR" customClass="WSLabel" customModule="WeatherStatus" customModuleProvider="target">
+                                        <rect key="frame" x="72.666666666666686" y="0.0" width="70.333333333333314" height="84"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dNj-of-E4f">
+                                        <rect key="frame" x="145" y="0.0" width="70.666666666666686" height="84"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-76-ahb" customClass="WSLabel" customModule="WeatherStatus" customModuleProvider="target">
+                                                <rect key="frame" x="35.333333333333343" y="0.0" width="0.0" height="39.666666666666664"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifa-D0-3PF" customClass="WSLabel" customModule="WeatherStatus" customModuleProvider="target">
+                                                <rect key="frame" x="35.333333333333343" y="44.666666666666657" width="0.0" height="39.333333333333343"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dKY-3j-RwQ">
+                                        <rect key="frame" x="217.66666666666666" y="0.0" width="70.333333333333343" height="84"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp9-zL-8Yn" customClass="WSLabel" customModule="WeatherStatus" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="70.333333333333329" height="42"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm3-Us-CGz" customClass="WSLabel" customModule="WeatherStatus" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="42" width="70.333333333333329" height="42"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fCA-ap-SiS" secondAttribute="trailing" id="VYY-V2-4wO"/>
+                            <constraint firstAttribute="bottom" secondItem="fCA-ap-SiS" secondAttribute="bottom" id="XNF-u8-qfd"/>
+                            <constraint firstItem="fCA-ap-SiS" firstAttribute="leading" secondItem="MOh-je-fHQ" secondAttribute="leading" id="Zcl-zp-cj8"/>
+                            <constraint firstItem="fCA-ap-SiS" firstAttribute="top" secondItem="MOh-je-fHQ" secondAttribute="top" id="vai-Qy-208"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="MOh-je-fHQ" firstAttribute="top" secondItem="lzm-oh-liz" secondAttribute="top" constant="8" id="2d4-Ws-JKc"/>
+                    <constraint firstAttribute="trailing" secondItem="MOh-je-fHQ" secondAttribute="trailing" constant="16" id="IZ8-Da-OV5"/>
+                    <constraint firstItem="MOh-je-fHQ" firstAttribute="leading" secondItem="lzm-oh-liz" secondAttribute="leading" constant="16" id="Wc5-uW-0WI"/>
+                    <constraint firstAttribute="bottom" secondItem="MOh-je-fHQ" secondAttribute="bottom" constant="8" id="bfj-Xt-lby"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="LbQ-69-Emf"/>
+            <connections>
+                <outlet property="climate" destination="ifa-D0-3PF" id="SyB-9C-vyv"/>
+                <outlet property="containerView" destination="MOh-je-fHQ" id="ly8-2Q-mfU"/>
+                <outlet property="feel" destination="mbT-76-ahb" id="ojX-0X-UtQ"/>
+                <outlet property="humidity" destination="qm3-Us-CGz" id="gad-Fy-LmI"/>
+                <outlet property="icon" destination="rdh-FX-5Hd" id="gxx-m6-lIm"/>
+                <outlet property="seaLevel" destination="wp9-zL-8Yn" id="hly-PY-5mu"/>
+                <outlet property="temp" destination="8Hb-tk-ZIR" id="dW5-4k-5gW"/>
+            </connections>
+            <point key="canvasLocation" x="16.793893129770993" y="40.140845070422536"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
