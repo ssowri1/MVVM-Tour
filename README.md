@@ -1,6 +1,6 @@
 # MVVM-Tour
 
-Sample service interacted application through MVVM Architecture.
+Sample service interacted iOS Native application through MVVM Architecture with Swift.
 
 ## Authors
 
